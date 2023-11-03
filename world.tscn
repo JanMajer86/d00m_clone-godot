@@ -1,0 +1,109 @@
+[gd_scene load_steps=8 format=3 uid="uid://b02qkjiid6y47"]
+
+[ext_resource type="PackedScene" uid="uid://drwnroc6wl37v" path="res://player.tscn" id="1_0jbh6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gyjfk"]
+albedo_color = Color(0.403922, 0.0156863, 0.0470588, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_bvuek"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mccvn"]
+albedo_color = Color(0.129412, 0.627451, 0.878431, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_si62j"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_jurec"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="Environment" id="Environment_ovfai"]
+background_mode = 1
+background_color = Color(0.411765, 0.411765, 0.411765, 1)
+
+[node name="World" type="Node3D"]
+
+[node name="Environment" type="Node3D" parent="."]
+
+[node name="Ground" type="MeshInstance3D" parent="Environment"]
+transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, -0.365082, 0, -0.756775)
+material_override = SubResource("StandardMaterial3D_gyjfk")
+mesh = SubResource("PlaneMesh_bvuek")
+
+[node name="Block" type="MeshInstance3D" parent="Environment"]
+transform = Transform3D(2, 0, 0, 0, 4, 0, 0, 0, 2, 0, 2, 0)
+material_override = SubResource("StandardMaterial3D_mccvn")
+mesh = SubResource("BoxMesh_si62j")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Block"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Block/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_jurec")
+
+[node name="Block2" type="MeshInstance3D" parent="Environment"]
+transform = Transform3D(2, 0, 0, 0, 4, 0, 0, 0, 2, 6.91942, 2, 4.56977)
+material_override = SubResource("StandardMaterial3D_mccvn")
+mesh = SubResource("BoxMesh_si62j")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Block2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Block2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_jurec")
+
+[node name="Block3" type="MeshInstance3D" parent="Environment"]
+transform = Transform3D(2, 0, 0, 0, 4, 0, 0, 0, 2, -6.55563, 2, 9.87061)
+material_override = SubResource("StandardMaterial3D_mccvn")
+mesh = SubResource("BoxMesh_si62j")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Block3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Block3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_jurec")
+
+[node name="Block4" type="MeshInstance3D" parent="Environment"]
+transform = Transform3D(2, 0, 0, 0, 4, 0, 0, 0, 2, -10.6924, 2, -6.2063)
+material_override = SubResource("StandardMaterial3D_mccvn")
+mesh = SubResource("BoxMesh_si62j")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Block4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Block4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_jurec")
+
+[node name="Block5" type="MeshInstance3D" parent="Environment"]
+transform = Transform3D(2, 0, 0, 0, 4, 0, 0, 0, 2, -15.3535, 2, 7.85837)
+material_override = SubResource("StandardMaterial3D_mccvn")
+mesh = SubResource("BoxMesh_si62j")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Block5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Block5/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_jurec")
+
+[node name="Block6" type="MeshInstance3D" parent="Environment"]
+transform = Transform3D(2, 0, 0, 0, 4, 0, 0, 0, 2, 12.6376, 2, -10.3948)
+material_override = SubResource("StandardMaterial3D_mccvn")
+mesh = SubResource("BoxMesh_si62j")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Block6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Block6/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_jurec")
+
+[node name="Block7" type="MeshInstance3D" parent="Environment"]
+transform = Transform3D(2, 0, 0, 0, 4, 0, 0, 0, 2, 6.09361, 2, 14.8283)
+material_override = SubResource("StandardMaterial3D_mccvn")
+mesh = SubResource("BoxMesh_si62j")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Block7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Block7/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_jurec")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ovfai")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(0.796129, 0.461238, 0.391712, 2.79526e-10, -0.647322, 0.762217, 0.605127, -0.606823, -0.515352, 2.56401, 9.84949, -2.50488)
+shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("1_0jbh6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -11.1898)

@@ -1,0 +1,14 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1699014419
+default_bus_layout.tres::AudioBusLayout::8247914939318678385::1698237166::0::1::::<><>::
+enemy.gd::GDScript::-1::1698692359::0::1::::<>CharacterBody3D<>::
+enemy.tscn::PackedScene::7232701641629118676::1698692359::0::1::::<><>::res://enemy.gd<>uid://dpfo03f37ftsq::::res://assets/monster_sprites.png<>uid://dkevwsswkhxab::::res://assets/monster_die.wav
+icon.svg::CompressedTexture2D::8576712542299966965::1698233470::1698233482::1::::<><>::
+player.gd::GDScript::-1::1698321942::0::1::::<>CharacterBody3D<>::
+player.tscn::PackedScene::8398709122772390237::1698240045::0::1::::<><>::uid://b4a53xkp7p3yv::::res://assets/gun_sprites.png<>res://player.gd<>uid://c30w3kctex0kr::::res://assets/revolver_shot1.wav
+world.tscn::PackedScene::4197869789264163202::1698322027::0::1::::<><>::uid://drwnroc6wl37v::::res://player.tscn
+::res://assets/::1698892369
+gun_sprites.png::CompressedTexture2D::4423769885418385549::1694934714::1698236327::1::::<><>::
+monster_die.wav::AudioStreamWAV::7870723317029896053::1663410046::1698236327::1::::<><>::
+monster_sprites.png::CompressedTexture2D::8223312756859440552::1694934706::1698691951::1::::<><>::
+revolver_shot1.wav::AudioStreamWAV::6791124738365464481::1665874522::1698236327::1::::<><>::
